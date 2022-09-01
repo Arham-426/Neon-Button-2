@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+}
+
+.box1 {
+    position: relative;
+    background-image: linear-gradient(45deg, rgb(0, 0, 0), rgb(0, 0, 0));
+    width: 100%;
+    height: 100vh;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    padding: 15px 65px;
+    background: rgb(15, 15, 15);
+    box-shadow: 0 0 5px #128836, 0 0 10px #128836;
+    border-radius: 2px;
+    transition: 0.2s;
+    transition-delay: 1s;
+    overflow: hidden;
+}
+
+.button:hover {
+    cursor: pointer;
+    color: white;
+    background: #21f360;
+    box-shadow: 0 0 10px #21f360, 0 0 40px #21f360, 0 0 80px #21f360;
+}
+
+.button span {
+    position: absolute;
+    display: block;
+}
+
+.button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #21f360);
+}
+
+.button:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+}
+
+.button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #21f360);
+}
+
+.button:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+.button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #21f360);
+}
+
+.button:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+.button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #21f360);
+}
+
+.button:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+.box2 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.box2 .text {
+    background: linear-gradient(270deg, rgb(18, 83, 143), #21f360, #ee7752, #e73c7e);
+    padding: 10px 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 1000;
+    letter-spacing: 3px;
+    font-size: 40px;
+    background-size: 400% 400%;
+    color: transparent;
+    -webkit-background-clip: text;
+    animation: change 10s ease-in-out infinite;
+}
+
+@keyframes change {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
